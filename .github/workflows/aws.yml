@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: 'toph-api'           # set this to your Amazon ECR repository name
   ECS_SERVICE: 'TOPH-API'                 # set this to your Amazon ECS service name
   ECS_CLUSTER: 'TOPH-API'                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: 'toph-api'
+  ECS_TASK_DEFINITION: 'toph-api.json'
                                                
   CONTAINER_NAME: 'api-toph-backend'    
                                      
