@@ -5,6 +5,7 @@ ENV ENV=production
 
 WORKDIR /app
 COPY package*.json ./
+COPY tsconfig.json ./
 COPY . .
 
 RUN npm i typescript pm2 -g
