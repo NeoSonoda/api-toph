@@ -10,6 +10,6 @@
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["./custom_typings", "./node_modules/@types"]
   },
-  "include": ["src/*"],
+  "include": [ "file.ts" ]
   "exclude": ["node_modules", ".vscode"]
 }
