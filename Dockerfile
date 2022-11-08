@@ -9,7 +9,6 @@ COPY . .
 
 RUN npm i
 COPY . .
-RUN tsc
 
 
 CMD ["pm2-runtime", "./dist/index.js"]
