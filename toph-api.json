@@ -1,14 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/toph-api:2",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/toph-api:3",
     "containerDefinitions": [
         {
-            "name": "toph",
-            "image": "toph/api",
+            "name": "toph-contain",
+            "image": "toph-contain/api",
             "cpu": 0,
-            "memory": 128,
             "links": [],
             "portMappings": [],
-            "essential": true,
+            "essential": false,
             "entryPoint": [],
             "command": [],
             "environment": [],
@@ -29,7 +28,7 @@
     "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "networkMode": "none",
-    "revision": 2,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -53,7 +52,7 @@
     ],
     "cpu": "256",
     "memory": "1024",
-    "registeredAt": "2022-11-08T01:22:45.399Z",
+    "registeredAt": "2022-11-09T22:46:00.548Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
