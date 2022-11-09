@@ -1,8 +1,8 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/tophApi:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/TOPH-API:1",
     "containerDefinitions": [
         {
-            "name": "toph",
+            "name": "TOPH-API",
             "image": "toph/api",
             "cpu": 0,
             "links": [],
@@ -31,7 +31,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/tophApi",
+                    "awslogs-group": "/ecs/TOPH-API",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -40,7 +40,8 @@
             "systemControls": []
         }
     ],
-    "family": "tophApi",
+    "family": "TOPH-API",
+    "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -60,6 +61,9 @@
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
         {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
         },
         {
@@ -75,8 +79,7 @@
         "FARGATE"
     ],
     "requiresCompatibilities": [
-        "EC2",
-        "FARGATE"
+        "EC2"
     ],
     "cpu": "1024",
     "memory": "3072",
@@ -84,7 +87,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2022-11-08T01:07:54.673Z",
+    "registeredAt": "2022-11-09T23:06:01.423Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
@@ -93,7 +96,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-ab1275eb-236b-4b79-8b72-205357e23f58/c33ec430-5f01-11ed-9978-127475421795"
+            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-3d1451d9-15f1-4be2-a114-68c1a931a6ea/11029e80-6083-11ed-b6b0-0e8e2f0f7c93"
         }
     ]
 }
