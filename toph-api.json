@@ -1,45 +1,5 @@
 {
     "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/tophApi:1",
-    "containerDefinitions": [
-        {
-            "name": "toph",
-            "image": "toph/api",
-            "cpu": 0,
-            "links": [],
-            "portMappings": [
-                {
-                    "containerPort": 80,
-                    "hostPort": 80,
-                    "protocol": "tcp"
-                }
-            ],
-            "essential": true,
-            "entryPoint": [],
-            "command": [],
-            "environment": [],
-            "environmentFiles": [],
-            "mountPoints": [],
-            "volumesFrom": [],
-            "secrets": [],
-            "dnsServers": [],
-            "dnsSearchDomains": [],
-            "extraHosts": [],
-            "dockerSecurityOptions": [],
-            "dockerLabels": {},
-            "ulimits": [],
-            "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/tophApi",
-                    "awslogs-region": "us-east-1",
-                    "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
-            },
-            "systemControls": []
-        }
-    ],
     "family": "tophApi",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
