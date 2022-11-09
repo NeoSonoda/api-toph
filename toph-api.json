@@ -1,50 +1,59 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/tophApi:1",
-    "family": "tophApi",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/toph-api:2",
+    "containerDefinitions": [
+        {
+            "name": "toph",
+            "image": "toph/api",
+            "cpu": 0,
+            "memory": 128,
+            "links": [],
+            "portMappings": [],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "systemControls": []
+        }
+    ],
+    "family": "toph-api",
+    "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
-    "networkMode": "awsvpc",
-    "revision": 1,
+    "networkMode": "none",
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
         {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
         {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
     ],
     "placementConstraints": [],
     "compatibilities": [
-        "EC2",
-        "FARGATE"
+        "EXTERNAL",
+        "EC2"
     ],
     "requiresCompatibilities": [
-        "EC2",
-        "FARGATE"
+        "EC2"
     ],
-    "cpu": "1024",
-    "memory": "3072",
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    },
-    "registeredAt": "2022-11-08T01:07:54.673Z",
+    "cpu": "256",
+    "memory": "1024",
+    "registeredAt": "2022-11-08T01:22:45.399Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
@@ -53,7 +62,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-ab1275eb-236b-4b79-8b72-205357e23f58/c33ec430-5f01-11ed-9978-127475421795"
+            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-d902897a-f019-404f-879b-7be9dcedb397/d6758500-5f03-11ed-a911-0a43189a2e79"
         }
     ]
 }
