@@ -17,7 +17,7 @@ class clsDados {
 
         } catch (error) {
 
-            return res.status(error.code ?? 500).send(error.message)
+            return res.status(error.code).send(error.message)
         }
     }
 
@@ -31,7 +31,7 @@ class clsDados {
 
         } catch (error) {
 
-            return res.status(error.code ?? 500).send(error.message)
+            return res.status(error.code).send(error.message)
         }
     }
 
@@ -49,7 +49,7 @@ class clsDados {
 
         } catch (error) {
 
-            return res.status(error.code ?? 500).send(error.message)
+            return res.status(error.code).send(error.message)
         }
     }
 
@@ -67,7 +67,7 @@ class clsDados {
 
         } catch (error) {
 
-            return res.status(error.code ?? 500).send(error.message)
+            return res.status(error.code).send(error.message)
         }
     }
 }
