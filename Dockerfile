@@ -10,7 +10,7 @@ RUN npm i
 COPY . .
 
 
-CMD ["pm2-runtime", "./dist/index.js"]
+CMD ["./dist/index.js"]
 
 # RUN chmod +x scripts/deploy_aws_ecs.sh
 # CMD ["bash", "-c", "scripts/deploy_aws_ecs.sh"]
