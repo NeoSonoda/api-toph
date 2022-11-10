@@ -3,7 +3,6 @@ FROM node:12-alpine
 EXPOSE 80
 ENV ENV=production
 
-WORKDIR /src
 COPY package*.json ./
 COPY . .
 
