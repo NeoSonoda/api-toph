@@ -1,6 +1,6 @@
 const config = require('dotenv').config()
 
-const env = config.parsed ?? process.env
+const env = process.env
 
 module.exports = {
     DB_USER: env.DB_USER,
