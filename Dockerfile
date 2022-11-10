@@ -10,8 +10,6 @@ RUN npm i
 COPY . .
 
 
-CMD ["./dist/index.js"]
-
 # RUN chmod +x scripts/deploy_aws_ecs.sh
 # CMD ["bash", "-c", "scripts/deploy_aws_ecs.sh"]
 # CMD ["npm start", "dist/index.js"]
