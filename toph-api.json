@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-backend:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-backend:5",
     "containerDefinitions": [
         {
             "name": "Toph-api-backend",
-            "image": "Toph-api/backend",
+            "image": "774438606843.dkr.ecr.us-east-1.amazonaws.com/toph-api:b456d26ad07f4631b652df3385886febf29a7788",
             "cpu": 0,
             "links": [],
             "portMappings": [
@@ -28,21 +28,49 @@
             "dockerLabels": {},
             "ulimits": [],
             "systemControls": []
+        },
+        {
+            "name": "TOPH-API",
+            "image": "TOPH-API/API",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "systemControls": []
         }
     ],
     "family": "Toph-api-backend",
     "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
-    "revision": 1,
+    "revision": 5,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
         {
             "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
@@ -62,7 +90,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2022-11-11T22:30:10.927Z",
+    "registeredAt": "2022-11-11T22:45:27.705Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
@@ -71,7 +99,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-5db48f44-f887-445b-8ffe-06e149684be7/61a9f340-6210-11ed-b97e-0e1d25a00a4d"
+            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-02e49499-e6ff-4743-9e98-297d981ca2cb/f55f1a10-6211-11ed-8652-0a65dd233c97"
         }
     ]
 }
