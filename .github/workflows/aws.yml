@@ -37,7 +37,7 @@ env:
   ECS_CLUSTER: 'TOPH-API'                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: 'toph-api.json'
                                                
-  CONTAINER_NAME: 'Toph-api-backend'    
+  CONTAINER_NAME: 'TOPH-API'    
                                      
 
 permissions:
