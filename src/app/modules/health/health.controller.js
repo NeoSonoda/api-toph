@@ -5,10 +5,10 @@ class healthCheck {
     static async healthCheck(req, res) {
 
         try {
-            
+
             let dadosCriados = {"funcional":"true"}
 
-            return res.status(201).json(dadosCriados)
+            return res.status(200).json(dadosCriados)
 
         } catch (error) {
 
