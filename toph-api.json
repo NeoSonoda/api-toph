@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-4:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-4:2",
     "containerDefinitions": [
         {
             "name": "Toph-api-4",
-            "image": "toph/api",
+            "image": "774438606843.dkr.ecr.us-east-1.amazonaws.com/toph-api:8d814efeb868f6844dff131df315775f393a423d",
             "cpu": 0,
             "memoryReservation": 512,
             "portMappings": [
@@ -14,8 +14,6 @@
                 }
             ],
             "essential": true,
-            "entryPoint": [],
-            "command": [],
             "environment": [],
             "mountPoints": [],
             "volumesFrom": []
@@ -23,10 +21,13 @@
     ],
     "family": "Toph-api-4",
     "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
         },
@@ -44,7 +45,7 @@
     ],
     "cpu": "1024",
     "memory": "3072",
-    "registeredAt": "2022-11-12T18:36:39.653Z",
+    "registeredAt": "2022-11-12T18:53:04.826Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": []
 }
