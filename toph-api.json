@@ -1,15 +1,15 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-Backend:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-backend:2",
     "containerDefinitions": [
         {
-            "name": "TOPH-API",
+            "name": "toph",
             "image": "toph/api",
             "cpu": 0,
             "links": [],
             "portMappings": [
                 {
-                    "containerPort": 80,
-                    "hostPort": 80,
+                    "containerPort": 8080,
+                    "hostPort": 8080,
                     "protocol": "tcp"
                 }
             ],
@@ -27,16 +27,35 @@
             "dockerSecurityOptions": [],
             "dockerLabels": {},
             "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/Toph-backend",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
             "systemControls": []
         }
     ],
-    "family": "Toph-Backend",
+    "family": "Toph-backend",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
@@ -45,6 +64,9 @@
         },
         {
             "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
     ],
     "placementConstraints": [],
@@ -53,7 +75,8 @@
         "FARGATE"
     ],
     "requiresCompatibilities": [
-        "EC2"
+        "EC2",
+        "FARGATE"
     ],
     "cpu": "256",
     "memory": "512",
@@ -61,7 +84,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2022-11-12T22:04:53.343Z",
+    "registeredAt": "2022-11-12T22:11:36.207Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
@@ -70,7 +93,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-05737c86-7785-4c5e-ab46-cd48e3fed659/06320c20-62d6-11ed-9c00-1283f7be93e7"
+            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-975c3f30-3a97-4d30-bb28-efbfcbe80763/2a63f800-609d-11ed-bd58-120319b93ddd"
         }
     ]
 }
