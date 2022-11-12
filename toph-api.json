@@ -1,16 +1,15 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-4:7",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-Backend:1",
     "containerDefinitions": [
         {
-            "name": "Toph-api-4",
-            "image": "774438606843.dkr.ecr.us-east-1.amazonaws.com/toph-api:e92205e1e0ed9f6f723c49184e74d40bb7ddd918",
+            "name": "TOPH-API",
+            "image": "toph/api",
             "cpu": 0,
-            "memoryReservation": 512,
             "links": [],
             "portMappings": [
                 {
-                    "containerPort": 3000,
-                    "hostPort": 8888,
+                    "containerPort": 80,
+                    "hostPort": 80,
                     "protocol": "tcp"
                 }
             ],
@@ -31,43 +30,38 @@
             "systemControls": []
         }
     ],
-    "family": "Toph-api-4",
-    "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
+    "family": "Toph-Backend",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
-    "revision": 7,
+    "networkMode": "awsvpc",
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
         {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
         {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
         }
     ],
     "placementConstraints": [],
     "compatibilities": [
-        "EXTERNAL",
-        "EC2"
+        "EC2",
+        "FARGATE"
     ],
     "requiresCompatibilities": [
         "EC2"
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2022-11-12T20:50:42.225Z",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2022-11-12T22:04:53.343Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
@@ -76,7 +70,7 @@
         },
         {
             "key": "ecs:taskDefinition:stackId",
-            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-aca231d9-b1b6-41d9-b5da-9a10c5c454c4/c5127ad0-62c7-11ed-a365-0ef1395c223d"
+            "value": "arn:aws:cloudformation:us-east-1:774438606843:stack/ECS-Console-V2-TaskDefinition-05737c86-7785-4c5e-ab46-cd48e3fed659/06320c20-62d6-11ed-9c00-1283f7be93e7"
         }
     ]
 }
