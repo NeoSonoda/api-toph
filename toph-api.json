@@ -1,11 +1,12 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-4:5",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:774438606843:task-definition/Toph-api-4:7",
     "containerDefinitions": [
         {
             "name": "Toph-api-4",
-            "image": "774438606843.dkr.ecr.us-east-1.amazonaws.com/toph-api:588d6688a71ba18e65659d2d30933104d2079de7",
+            "image": "774438606843.dkr.ecr.us-east-1.amazonaws.com/toph-api:e92205e1e0ed9f6f723c49184e74d40bb7ddd918",
             "cpu": 0,
             "memoryReservation": 512,
+            "links": [],
             "portMappings": [
                 {
                     "containerPort": 3000,
@@ -14,20 +15,34 @@
                 }
             ],
             "essential": true,
+            "entryPoint": [],
+            "command": [],
             "environment": [],
+            "environmentFiles": [],
             "mountPoints": [],
-            "volumesFrom": []
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "systemControls": []
         }
     ],
     "family": "Toph-api-4",
     "taskRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::774438606843:role/ecsTaskExecutionRole",
-    "revision": 5,
+    "revision": 7,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
@@ -37,6 +52,9 @@
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
         }
     ],
     "placementConstraints": [],
@@ -47,9 +65,9 @@
     "requiresCompatibilities": [
         "EC2"
     ],
-    "cpu": "1024",
+    "cpu": "256",
     "memory": "512",
-    "registeredAt": "2022-11-12T20:27:36.959Z",
+    "registeredAt": "2022-11-12T20:50:42.225Z",
     "registeredBy": "arn:aws:iam::774438606843:root",
     "tags": [
         {
