@@ -1,3 +1,5 @@
+FROM node:16-alpine
+
 EXPOSE 80
 ENV ENV=production
 
@@ -5,7 +7,6 @@ WORKDIR /
 
 COPY package*.json ./
 COPY . .
-FROM node:16.14-alpine as development
 RUN node -v
 
 RUN npm install
