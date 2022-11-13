@@ -5,8 +5,10 @@ ENV ENV=production
 
 COPY package*.json ./
 COPY . .
-FROM node:16-alpine as development
+FROM node:16.14-alpine as development
 RUN node -v
+
+RUN npm install
 COPY . .
 
 CMD ["npm","start"]
