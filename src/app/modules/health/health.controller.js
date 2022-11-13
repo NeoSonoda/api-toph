@@ -1,5 +1,3 @@
-const {business} = require('../dados/dados.business')
-
 //Controller: recebe os dados da rota e redireciona pra camada de negócios (business)
 class healthCheck {
 
@@ -19,27 +17,21 @@ class healthCheck {
         }
     }
 
-    static async criaDados(req, res) {
+    static async healthChecka(req, res) {
 
-        console.log("Criando dado.")
+        console.log("health check init.")
 
         try {
 
-           const {dados} = req.body
-           
-           if(!dados) return res.status(400).send("Parâmetros não enviados.")
+            let dadosCriados = {"funcional":"true"}
 
-            let dadosCriados = await business.criaDados(dados)
-
-            return res.status(201).json(dadosCriados)
+            return res.status(200).json(dadosCriados)
 
         } catch (error) {
-            console.log(error)
 
             return res.status(error.code).send(error.message)
         }
     }
-
 }
 
 module.exports = healthCheck
