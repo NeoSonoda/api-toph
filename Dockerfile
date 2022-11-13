@@ -8,6 +8,7 @@ COPY . .
 
 RUN npm i sequelize-cli
 RUN npm i
+RUN node -v
 RUN npx sequelize-cli db:create -- -- name "toph"
 RUN npx sequelize-cli db:migrate
 COPY . .
