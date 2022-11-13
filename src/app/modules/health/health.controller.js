@@ -1,13 +1,9 @@
-const { Dados } = require('../../../../models/index')
-
 //Controller: recebe os dados da rota e redireciona pra camada de negócios (business)
 class healthCheck {
 
     static async healthCheck(req, res) {
 
         console.log("health check init.")
-
-        Dados = Dados;
 
         try {
 
