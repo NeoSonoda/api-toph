@@ -1,11 +1,3 @@
-const repositories = require('./usuarios.repository')
-const { errors } = require('../../services/error')
-const config = require('../../../../config/environment.config')
-
-
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-
 //Controller: recebe os dados da rota e redireciona pra camada de negócios (business)
 class healthCheck {
 
