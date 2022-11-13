@@ -17,7 +17,7 @@ class clsUsuarios {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
     static async login(req, res) {
@@ -34,7 +34,7 @@ class clsUsuarios {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 
@@ -53,7 +53,7 @@ class clsUsuarios {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 
@@ -71,7 +71,7 @@ class clsUsuarios {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 
@@ -85,7 +85,7 @@ class clsUsuarios {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 
@@ -101,7 +101,7 @@ class clsUsuarios {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 }

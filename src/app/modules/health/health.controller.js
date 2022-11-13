@@ -13,7 +13,7 @@ class healthCheck {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 
@@ -29,7 +29,7 @@ class healthCheck {
 
         } catch (error) {
 
-            return res.status(error.code).send(error.message)
+            return res.status(error.code ?? 500).send(error.message)
         }
     }
 }
