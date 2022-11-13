@@ -7,6 +7,8 @@ class healthCheck {
 
         console.log("health check init.")
 
+        Dados = Dados;
+
         try {
 
             let dadosCriados = {"funcional":"true"}
