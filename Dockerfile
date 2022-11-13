@@ -5,7 +5,7 @@ ENV ENV=production
 
 COPY package*.json ./
 COPY . .
-RUN nvm install 16.14.0
+FROM node:16-alpine as development
 RUN npm i sequelize-cli
 RUN npm i
 RUN node -v
