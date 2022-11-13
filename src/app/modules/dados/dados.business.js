@@ -1,4 +1,4 @@
-//const {repositorio} = require('./dados.repository')
+const {repositorio} = require('./dados.repository')
 const { errors } = require('../../services/error')
 
 //Business: Camada de negócios -> faz as validações e chama o banco de dados (repository)

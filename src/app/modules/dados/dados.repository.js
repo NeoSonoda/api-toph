@@ -1,4 +1,4 @@
-//const { Dados } = require('../../../../models/index')
+const { Dados } = require('../../../../models/index')
 
 async function create(dados){
 
