@@ -6,9 +6,10 @@ ENV ENV=production
 COPY package*.json ./
 COPY . .
 FROM node:16-alpine as development
-RUN npm i sequelize-cli
 RUN npm i
 RUN node -v
+RUN npx sequelize-cli db:create -- -- name "toph"
+RUN npx sequelize-cli db:migrate
 COPY . .
 
 CMD ["npm","start"]
