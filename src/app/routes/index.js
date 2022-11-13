@@ -6,6 +6,6 @@ module.exports = app => {
 
     app
         .use('/v1/dados', dadosRoute)
-        .use('/v1/usuarios', usuarioRoute)
         .use('/v1/health', healthCheck)
+        .use('/v1/usuarios', usuarioRoute)
 }
