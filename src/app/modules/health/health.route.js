@@ -7,6 +7,5 @@ const healthCheckController = require('./health.controller')
 //Para acesso: http://localhost:8080/v1/health
 
 router.get('/check', healthCheckController.healthCheck)
-router.get('/checka', healthCheckController.healthChecka)
 
 module.exports = router
