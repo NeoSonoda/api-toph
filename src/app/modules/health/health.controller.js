@@ -4,6 +4,8 @@ class healthCheck {
 
     static async healthCheck(req, res) {
 
+        console.log("health check init.")
+
         try {
 
             let dadosCriados = {"funcional":"true"}
