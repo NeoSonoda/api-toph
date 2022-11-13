@@ -1,7 +1,7 @@
-FROM node:12-alpine
-
 EXPOSE 80
 ENV ENV=production
+
+WORKDIR /
 
 COPY package*.json ./
 COPY . .
