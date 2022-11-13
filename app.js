@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const swaggerUi = require("swagger-ui-express")
 const swaggerDocs = require("./swagger.json")
 
-const routes = require('./src/routes')
+const routes = require('./src/app/routes/index')
 
 let app = express()
 
