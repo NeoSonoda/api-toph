@@ -3,6 +3,8 @@ class clsUsuarios {
 
     static async criaUsuario(req, res) {
 
+        console.log("Criando usuario.")
+
         try {
 
             const { usuario } = req.body

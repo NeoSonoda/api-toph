@@ -5,6 +5,8 @@ class clsDados {
 
     static async criaDados(req, res) {
 
+        console.log("Criando dado.")
+
         try {
 
            const {dados} = req.body
