@@ -7,6 +7,9 @@ COPY package*.json ./
 COPY . .
 
 RUN npm i
+RUN npm i sequelize-cli
+RUN npx sequelize-cli db:create -- -- name "toph"
+RUN npx sequelize-cli db:migrate
 COPY . .
 
 CMD ["npm","start"]

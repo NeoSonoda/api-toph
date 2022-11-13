@@ -4,11 +4,11 @@ const router = express.Router()
 const dadosController = require('./dados.controller')
 
 //rotas (chamam a função dentro da controller de dados)
-//Para acesso: http://localhost:3000/v1/dados
+//Para acesso: http://localhost:8080/v1/dados
 
-router.post('/dados', dadosController.criaDados)
-router.get('/dados', dadosController.pegaDados)
-router.get('/dados/:id', dadosController.pegaDadosPorId)
-router.get('/dados/:usuarioId', dadosController.pegaDadosPorUsuarioId)
+router.post('/', dadosController.criaDados)
+router.get('/', dadosController.pegaDados)
+router.get('/:id', dadosController.pegaDadosPorId)
+router.get('/usuario/:usuarioId', dadosController.pegaDadosPorUsuarioId)
 
 module.exports = router
