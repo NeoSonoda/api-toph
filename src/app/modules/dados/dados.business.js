@@ -1,13 +1,13 @@
-const repositories = require('./dados.repository')
+const {repositorio} = require('./dados.repository')
 const { errors } = require('../../services/error')
 
 //Business: Camada de negócios -> faz as validações e chama o banco de dados (repository)
-exports.criaDados = async (dados) => {
+async function criaDados(dados){
 
     try {
 
         console.log(dados)
-        const dadosCriados = await repositories.create(dados)
+        const dadosCriados = await repositorio.create(dados)
 
         if (!dadosCriados) {
 
@@ -22,11 +22,11 @@ exports.criaDados = async (dados) => {
     }
 }
 
-exports.pegaDados = async () => {
+async function pegaDados() {
 
     try {
 
-        const dadosEncontrados = await repositories.find()
+        const dadosEncontrados = await repositorio.find()
 
         if (!dadosEncontrados) {
 
@@ -41,11 +41,11 @@ exports.pegaDados = async () => {
     }
 }
 
-exports.pegaDadosPorId = async (id) => {
+async function  pegaDadosPorId(id) {
 
     try {
 
-        const dadosEncontrados = await repositories.findByPK(id)
+        const dadosEncontrados = await repositorio.findByPK(id)
 
         if (!dadosEncontrados) {
 
@@ -60,11 +60,11 @@ exports.pegaDadosPorId = async (id) => {
     }
 }
 
-exports.pegaDadosPorUsuarioId = async (usuarioId) => {
+async function pegaDadosPorUsuarioId(usuarioId) {
 
     try {
 
-        const dadosEncontrados = await repositories.find({usuarioId})
+        const dadosEncontrados = await repositorio.find({usuarioId})
 
         if (!dadosEncontrados) {
 
@@ -78,3 +78,5 @@ exports.pegaDadosPorUsuarioId = async (usuarioId) => {
         throw error
     }
 }
+
+exports.business = { pegaDadosPorUsuarioId, pegaDadosPorId, pegaDados, criaDados }
