@@ -1,33 +1,31 @@
-const Dados = require('../../../../models/index')
+const { Dados } = require('../../../../models/index')
 
-async function create(dados){
+exports.create = async (dados) => {
 
     return await Dados.create(dados)
 }
 
-async function update(dadosId, dados){
+exports.update = async (dadosId, dados) => {
 
     return await Dados.update(dados, { where: { id: dadosId } })
 }
 
-async function deletes (dadosId){
+exports.delete = async (dadosId) => {
 
     return await Dados.destroy({ where: { id: dadosId } })
 }
 
-async function find (filter){
+exports.find = async (filter) => {
 
     return await Dados.findAll(filter)
 }
 
-async function findByPK(id) {
+exports.findByPK = async (id) => {
 
     return await Dados.findByPk(id)
 }
 
-async function findOne(filter){
+exports.findOne = async (filter) => {
 
     return await Dados.findOne({ where: { filter } })
 }
-
-exports.repositorio = { create, update, deletes, find, findByPK, findOne }

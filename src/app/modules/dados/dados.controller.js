@@ -1,11 +1,9 @@
-const {business} = require('./dados.business')
+const business = require('./dados.business')
 
 //Controller: recebe os dados da rota e redireciona pra camada de negócios (business)
 class clsDados {
 
     static async criaDados(req, res) {
-
-        console.log("Criando dado.")
 
         try {
 
